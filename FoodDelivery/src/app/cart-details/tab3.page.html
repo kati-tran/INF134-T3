@@ -1,5 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+    <ion-back-button></ion-back-button> <!--Back button testing must be done when linking starts.-->
+    </ion-buttons>
     <ion-title>
       Cart Details
     </ion-title>
@@ -13,5 +16,57 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <!--List of Food Items-->
+  <ion-list>
+    <ion-item>
+      <ion-label text-wrap>
+        <h3>Pokémon Yellow</h3>
+        <p>Super cool, amazing, wow</p>
+      </ion-label>
+      <ion-button fill=clear>
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-label text-wrap>
+        <h3>Mega Man X</h3>
+        <p>Yep, uh huh</p>
+      </ion-label>
+      <ion-button fill=clear>
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-button size="small"><ion-icon name="remove-circle-outline"></ion-icon></ion-button>
+      <div class="rectangle"><h6>1</h6></div>
+      <ion-button size="small"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="8">
+            <ion-label>
+              <h3>The Legend of Zelda</h3>
+              <p font-size:small>Xtra guac, no tomato, lettuce</p>
+            </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label text-wrap><h4>$99.99</h4></ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-button fill=clear>
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
 </ion-content>
+<div style="position: absolute; bottom: 0px; width: 100%">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <ion-button color="primary">Proceed to Checkout</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
