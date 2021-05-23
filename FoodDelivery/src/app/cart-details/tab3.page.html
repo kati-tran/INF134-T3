@@ -38,24 +38,31 @@
       </ion-button>
     </ion-item>
 
+    
     <ion-item>
-      <ion-button size="small"><ion-icon name="remove-circle-outline"></ion-icon></ion-button>
-      <div class="rectangle"><h6>1</h6></div>
-      <ion-button size="small"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+      <div class="quantity">
+        <button class=increment type="button" name="button">
+          <ion-icon name="remove-outline"></ion-icon>
+        </button>
+        <input type="text" name="name" value="12" maxlength="2" size="1" style="text-align: center; font-size:12px;">
+        <button class=increment type="button" name="button">
+          <ion-icon name="add-outline"></ion-icon>
+        </button>
+      </div>
       <ion-grid>
         <ion-row>
           <ion-col size="8">
             <ion-label>
-              <h3>The Legend of Zelda</h3>
-              <p font-size:small>Xtra guac, no tomato, lettuce</p>
+              <h3>Blk Bean Burrito</h3>
+              <p>Xtra guac, no tomato, lettuce</p>
             </ion-label>
           </ion-col>
           <ion-col>
-            <ion-label text-wrap><h4>$99.99</h4></ion-label>
+            <h4>$999.99</h4>
           </ion-col>
         </ion-row>
       </ion-grid>
-      <ion-button fill=clear>
+      <ion-button class=remove fill=clear no-padding>
         <ion-icon name="close-outline"></ion-icon>
       </ion-button>
     </ion-item>
