@@ -15,7 +15,7 @@ export class Tab3Page {
   {
     for(var i = 0; i < this.numItems; i++)
     {
-      this.foodItems.push(new FoodItem(i,"Item" + i,(5.67*i).toFixed(2),["mod1", "mod2", "mod3"]))
+      this.foodItems.push(new FoodItem(i,"Item" + i,(5.67*i).toFixed(2),["mod1", "mod2", "mod3", "mod4"]))
     }
   }
 
