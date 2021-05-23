@@ -5,7 +5,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab3Page } from './tab3.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
-import {FoodItem} from './fooditem'
 
 import { Tab3PageRoutingModule } from './tab3-routing.module';
 
@@ -20,16 +19,4 @@ import { Tab3PageRoutingModule } from './tab3-routing.module';
   ],
   declarations: [Tab3Page]
 })
-export class Tab3PageModule {
-
-  foodItems = []
-  numItems = 10
-
-  constructor()
-  {
-    for(var i = 0; i < this.numItems; i++)
-    {
-      this.foodItems.push(new FoodItem("Item" + i,5.67*i,["mod1", "mod2", "mod3"]))
-    }
-  }
-}
+export class Tab3PageModule {}

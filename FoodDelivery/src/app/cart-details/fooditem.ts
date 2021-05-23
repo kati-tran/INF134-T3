@@ -1,12 +1,14 @@
 export class FoodItem {
+    public num;
     public name: string;
     public price: number;
     public allModifiers: string[];
     public appliedModifiers: string[];
     public quantity: number;
 
-    constructor(itemName,itemPrice,itemModifiers)
+    constructor(itemNum,itemName,itemPrice,itemModifiers)
     {
+        this.num = itemNum
         this.name=itemName
         this.price=itemPrice
         this.allModifiers = itemModifiers
@@ -31,5 +33,15 @@ export class FoodItem {
                 this.appliedModifiers.push(this.allModifiers[modNum])
         }
     }
-            
+    
+    public incQuantity()
+    {
+        this.quantity++
+    }
+
+    public decQuantity()
+    {
+        if (this.quantity > 1)
+            this.quantity--
+    }
 }
