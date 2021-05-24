@@ -27,12 +27,13 @@
 
 <ng-template #showItems>
   <ion-list>
+    <h2>Items</h2>
     <ion-item *ngFor="let item of foodItems">
       <div class="quantity">
         <button (click)="item.decQuantity()" class=increment type="button" name="button">
           <ion-icon name="remove-outline"></ion-icon>
         </button>
-        <input [(ngModel)]="item.quantity" type="text" name="name" value={{item.quantity}} maxlength="2" size="1" style="text-align: center; font-size:12px;">
+        <input (change)="item.setQuantity($event.target.value)" type="text" name="name" value={{item.quantity}} maxlength="2" size="1" style="text-align: center; font-size:12px;">
         <button (click)="item.incQuantity()" class=increment type="button" name="button">
           <ion-icon name="add-outline"></ion-icon>
         </button>
@@ -58,17 +59,63 @@
 
 
   <!--Cart Subtotal-->
+    <div style="position: absolute; bottom: {{setBottom()}}; width: 100%;">
+    <ion-grid>
+      <h2>Total</h2>
+      <ion-row>
+        <ion-col>
+        <ion-label class="ion-float-left"><h3>Subtotal</h3></ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label class="ion-float-right"><h3 style="font-weight: bold;">${{detSubtotal()}}</h3></ion-label>
+      </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+        <ion-label class="ion-float-left"><h3>Delivery Fee</h3></ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label class="ion-float-right"><h3 style="font-weight: bold;">${{deliveryFee}}</h3></ion-label>
+      </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+        <ion-label class="ion-float-left"><h3>Tax</h3></ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label class="ion-float-right"><h3 style="font-weight: bold;">${{detTax()}}</h3></ion-label>
+      </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+        <ion-label class="ion-float-left"><h3>Tip</h3></ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label class="ion-float-right">
+          <span style="font-weight: bold; font-size:12px">$<input (change)="setTip($event.target.value)" type="text" name="name" value={{tip.toFixed(2)}} maxlength="6" size="3" style="text-align: center; font-size:12px;"></span>
+        </ion-label>
+      </ion-col>
+      </ion-row>
+      <hr style="background:black">
+      <ion-row>
+        <ion-col>
+        <ion-label class="ion-float-left"><h3>Total Cost</h3></ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label class="ion-float-right"><h3 style="font-weight: bold;">${{detTotal()}}</h3></ion-label>
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+  
 
-
+  <!--Checkout Button-->
+      <ion-row *ngIf="foodItems.length!=0">
+        <ion-col size="12" class="ion-text-center">
+          <ion-button color="primary">Proceed to Checkout</ion-button>
+        </ion-col>
+      </ion-row>
+  </div>
 </ng-template>
 </ion-content>
-<div *ngIf="foodItems.length!=0" style="position: absolute; bottom: 0px; width: 100%">
-  <ion-grid>
-    <ion-row>
-      <ion-col size="12" class="ion-text-center">
-        <ion-button color="primary">Proceed to Checkout</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</div>
+
 

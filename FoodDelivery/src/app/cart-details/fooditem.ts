@@ -44,4 +44,12 @@ export class FoodItem {
         if (this.quantity > 1)
             this.quantity--
     }
+
+    public setQuantity(value)
+    {
+        if (!isNaN(value))
+            this.quantity = value
+        else
+            this.quantity = 1
+    }
 }
