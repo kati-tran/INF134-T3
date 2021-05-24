@@ -1,9 +1,121 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>DeliverySystemStatus</ion-title>
+    <ion-buttons slot="start">
+      <!-- Change defaultHref to link to page previous of it -->
+      <ion-back-button defaultHref="home"></ion-back-button> 
+    </ion-buttons>
+    <ion-title >Your Order</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-progress-bar value="0.3333"></ion-progress-bar>
+  <ion-title class="ion-text-center">Status: Being Prepared</ion-title>
+  <ion-title class="ion-text-center">Food Will Be Delivered In:</ion-title>
+  <ion-title class="ion-text-center"> 25:00 minutes</ion-title>
+
+  <ion-img align="center" src="assets/icon/map.png"></ion-img>
+
+  <ion-title>Order Details</ion-title>
+
+  <ion-text>Ordered on April 20, 2021  |   Order# 420</ion-text>
+  
+
+  
+  
+
+  
+  <ion-list>
+    <ion-item>
+      <ion-label>Name: Jane Doe
+        <br/>Phone number: 678 - 999 - 8212
+        <br/>Payment Method: VISA **** 1234
+      </ion-label>
+    </ion-item>  
+
+    <ion-item button (click)="buttonClick()" detail>
+      <ion-label>
+        Order Details
+      </ion-label>
+    </ion-item>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="assets/icon/blank.png">
+          </ion-thumbnail>
+          <ion-text>Restaurant: Zot n Go <br/>Croissant <br/> Price: $0.99 <br/> Quantity: 1</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="assets/icon/drink.png">
+          </ion-thumbnail>
+          <ion-text>Restaurant: Starbucks <br/>Tall Caramel Frappuccino <br/> Price: $3.99 <br/> Quantity: 1</ion-text>
+        </ion-item>
+      </ion-list>
+    
+    <ion-item button (click)="buttonClick()" detail>
+      <ion-label>
+        Payment Summary
+      </ion-label>
+    </ion-item>
+
+      <ion-list>
+        <ion-item>
+          <ion-label>Item(s) Subtotal:</ion-label>
+          <ion-note slot="end">$4.98</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Deliery Fee:</ion-label>
+          <ion-note slot="end">$2.00</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Total before tax:</ion-label>
+          <ion-note slot="end">$6.98</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Tax:</ion-label>
+          <ion-note slot="end">$1.02</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Tip:</ion-label>
+          <ion-note slot="end">$2.00</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Grand Total:</ion-label>
+          <ion-note slot="end">$10.00</ion-note>
+        </ion-item>
+      </ion-list>
+
+      <ion-item button (click)="buttonClick()" detail>
+        <ion-label>
+          View Order
+        </ion-label>
+      </ion-item>
+
+  </ion-list>
+  
+  
+
+  
+  <!-- <ion-list>
+    <ion-item-sliding>
+      <ion-item>
+        <ion-label>Item</ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="unread(item)">Unread</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  
+    <ion-item-sliding>
+      <ion-item>
+        <ion-label>Item</ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="unread(item)">Unread</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>  -->
 </ion-content>
