@@ -9,15 +9,15 @@ const routes: Routes = [
     children: [
       {
         path: 'tab1',
-        loadChildren: () => import('../dashboard/tab1.module').then(m => m.Tab1PageModule)
+        loadChildren: () => import('../delivery-system-status/delivery-system-status.module').then(m => m.DeliverySystemStatusPageModule)
       },
       {
         path: 'tab2',
-        loadChildren: () => import('../Restaurant-Page/tab2.module').then(m => m.Tab2PageModule)
+        loadChildren: () => import('../qrcode/qrcode.module').then(m => m.QRCodePageModule)
       },
       {
         path: 'tab3',
-        loadChildren: () => import('../Cart-Details/tab3.module').then(m => m.Tab3PageModule)
+        loadChildren: () => import('../cart-details/tab3.module').then(m => m.Tab3PageModule)
       },
       {
         path: '',

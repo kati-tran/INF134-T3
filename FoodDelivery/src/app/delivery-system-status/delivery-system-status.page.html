@@ -10,10 +10,11 @@
 
 <ion-content>
 
+  <!-- <h1>{{ time | async }}</h1> -->
   <ion-progress-bar value="0.3333"></ion-progress-bar>
   <ion-title class="ion-text-center">Status: Being Prepared</ion-title>
   <ion-title class="ion-text-center">Food Will Be Delivered In:</ion-title>
-  <ion-title class="ion-text-center"> 25:00 minutes</ion-title>
+  <ion-title class="ion-text-center">{{time | async}}</ion-title>
 
   <ion-img align="center" src="assets/icon/map.png"></ion-img>
 
