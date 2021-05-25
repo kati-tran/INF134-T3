@@ -58,13 +58,35 @@ export class Tab3Page {
 
   public setTip(value)
   {
-    if (!isNaN(value))
+    if (!isNaN(value) && value >= 0)
       this.tip = Number(value)
+    else
+      this.tip = Number(0.00)
   }
 
   public detTotal()
   {
     return (this.subtotal+this.tax+this.tip+this.deliveryFee).toFixed(2)
+  }
+
+  public resetQuantity(input, itemNum)
+  {
+      if (input.value == "" || input.value < 1)
+      {
+        input.value = 1
+        this.foodItems[itemNum].quantity = 1
+      }  
+      else
+        input.value = String(this.foodItems[itemNum].quantity) 
+  }
+
+  public resetTip(input)
+  {
+    if (isNaN(input.value) || input.value < 0)
+    {
+      input.value = (0).toFixed(2)
+      this.tip = 0.00
+    } 
   }
 }
 
