@@ -49,3 +49,14 @@ h4 {
   top: 50%;
   transform: translateY(-50%);
 }
+
+
+.more-items-button {
+  --border-radius:40px; 
+  --background: rgb(201, 201, 201);
+  --color: black;
+
+  font-size:10px; 
+  text-transform: none;
+}
+

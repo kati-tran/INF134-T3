@@ -34,7 +34,7 @@ export class Tab3Page {
 
   public setBottom()
   {
-    if (this.foodItems.length < 4)
+    if (this.foodItems.length < 3)
       return 0
     else
       return 'auto'
