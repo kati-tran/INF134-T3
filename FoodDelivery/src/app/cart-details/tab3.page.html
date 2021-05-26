@@ -56,7 +56,7 @@
       </ion-button>
     </ion-item>
     <br>
-    <ion-button class="more-items-button ion-float-right" size=small>
+    <ion-button  [routerLink]="['/restaurant-page']" class="more-items-button ion-float-right" size=small>
       <ion-icon name="add-circle-outline"></ion-icon>
       &nbsp;Add more items
     </ion-button>
@@ -118,7 +118,7 @@
   <!--Checkout Button-->
       <ion-row *ngIf="foodItems.length!=0">
         <ion-col size="12" class="ion-text-center">
-          <ion-button style="--border-radius:40px; --color:rgb(196, 179, 30); text-transform: none;">
+          <ion-button [routerLink]="['/information-form']" style="--border-radius:40px; --color:rgb(255, 219, 13); text-transform: none;">
             Proceed to Checkout
           </ion-button>
         </ion-col>
