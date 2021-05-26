@@ -1,0 +1,39 @@
+ion-toolbar {
+  --background: #0065a5;
+}
+
+ion-content {
+  --background: #ffffff;
+}
+
+ion-list {
+  --background: #ffffff;
+}
+
+ion-item {
+  --background: #ffffff;
+}
+
+ion-title {
+  font-family: Livvic;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+ion-button {
+  --background: #0065a5;
+  --border-radius: 20px;
+  width: 60%;
+  height: 50%;
+  margin-top: 12%;
+  margin-bottom: 12%;
+  margin-left: 20%;
+}
+
+ion-input {
+  --placeholder-color: #828282;
+  background-color: #d4d6db;
+  color: black;
+  font-family: Livvic;
+}
