@@ -1,21 +1,18 @@
-<ion-header>
+<ion-header id="header">
   <ion-toolbar>
     <ion-title>Settings</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <h2 style="text-align:center">App Theme Picker</h2>
+  <h2 id="title" style="text-align:center">App Theme Picker</h2>
   <ion-range [(ngModel)]="sliderValue" min="1" max="5" step="1" snaps="true" color="secondary"></ion-range>
-  <div style="text-align:center">
+  <div sid="theme-name" tyle="text-align:center">
     <h2>Theme {{sliderValue}}</h2>
   </div>
   
-  
-  <div style="text-align:center">
+  <div id="dummy-text" style="text-align:center">
     <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h3>
     <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
   </div>
-  
-
 </ion-content>
