@@ -10,6 +10,7 @@ export class DeliverySystemStatusPage implements OnInit {
 
   time: BehaviorSubject<string> = new BehaviorSubject('00:00');
   timer: number; //in seconds
+  progress: number;
 
   state: 'start'
   constructor() { }
@@ -17,7 +18,11 @@ export class DeliverySystemStatusPage implements OnInit {
   ngOnInit() {
     // console.log(document.getElementsByClassName('ion-text-center').length)
     // console.log(document.getElementsByClassName('ion-text-center')[0].innerHTML)
-    this.timer = 5 * 60;
+    console.log(document.getElementsByClassName('progressBar'))
+    console.log(document.getElementsByClassName('progressBar')[0]["value"])
+    this.timer = 1 * 60;
+    this.progress = 1;
+    //document.getElementsByClassName('progressBar')[0]["value"] = 100
     setInterval( ()=> {
       this.updateTimeValue()
     }, 1000);
@@ -33,9 +38,9 @@ export class DeliverySystemStatusPage implements OnInit {
 
     --this.timer;
 
-    if (this.timer < 0){
-      this.startTimer(5)
-    }
+    // if (this.timer < 0){
+    //   this.startTimer(0)
+    // }
   }
 
   startTimer(duration:number){
@@ -56,9 +61,18 @@ export class DeliverySystemStatusPage implements OnInit {
     this.time.next(text);
 
     --this.timer;
+    ++this.progress
+    // console.log(this.progress)
+    document.getElementsByClassName('progressBar')[0]["value"] = this.progress/60
+    // console.log(this.timer)
+
 
     if (this.timer < 0){
-      this.startTimer(50)
+      //this.startTimer(50)
+      this.timer = 0;
+    }
+    if (this.progress > 60){
+      this.progress = 60
     }
 
   }
