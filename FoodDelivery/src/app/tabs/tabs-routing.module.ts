@@ -9,7 +9,7 @@ const routes: Routes = [
     children: [
       {
         path: 'tab1',
-        loadChildren: () => import('../dashboard/tab1.module').then(m => m.Tab1PageModule)
+        loadChildren: () => import('../cancellation/cancellation.module').then(m => m.CancellationPageModule)
       },
       {
         path: 'tab2',

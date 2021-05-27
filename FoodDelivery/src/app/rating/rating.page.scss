@@ -22,5 +22,20 @@ ion-item > ion-text{
 
 }
 ion-button{
-    margin-top: 100px;
+    margin:auto;
+}
+ion-item > ion-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+ion-list > ion-item{
+    padding-bottom: 50px;
+}
+ion-list{
+    padding-top:10vh;
+}
+#skip{
+    --background: red;
 }
