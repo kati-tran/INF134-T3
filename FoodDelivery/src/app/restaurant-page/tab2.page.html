@@ -18,54 +18,10 @@
   </ion-header>
 
 
-
-
-  <ion-slides >
-    <!--*ngFor = "let storageOvernight of storageOvernightData.slice().reverse() | slice:-5"-->
-    <ion-slide>
-      <ion-card> 
-        <IonCardHeader>
-          <!--insert image here-->
-          <ion-img src='assets/best-chicken-wings-in-Los-Angeles-Maple-Block.jpeg' style="height: 212px; width: 290px; text-align: center;"></ion-img>
-        </IonCardHeader>
-    
-        <ion-card-content>
-          Buffalo Wild Wings
-        </ion-card-content>
-        
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-
-      <ion-card style="height: 343;">
-        <IonCardHeader>
-          <!--insert image here-->
-          <ion-img src='assets/seafood-alfredo-dpv-1180x730.webp'></ion-img>
-        </IonCardHeader>
-    
-        <ion-card-content style="height: 50%;">
-          Olive Garden
-        </ion-card-content>
-        
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-      <ion-card>
-        <IonCardHeader>
-          <!--insert image here-->
-          <ion-img src='assets/pho.jpeg'></ion-img>
-        </IonCardHeader>
-    
-        <ion-card-content>
-          Simply Pho
-        </ion-card-content>
-        
-      </ion-card>
-    </ion-slide>
-
-  </ion-slides>
+  <ion-card-header style="text-align: center;" class="logo">
+    <!--insert image here-->
+    <ion-img src='assets/buffalo wild wings.png' style="height: 212px; width: 290px; text-align: center;"></ion-img>
+  </ion-card-header>
 
   <ion-item style="padding: 1px 40px 10px 40px;">
     <ion-label className="ion-text-wrap">
@@ -77,5 +33,61 @@
     </ion-label>
   </ion-item>
 
+
+  <!--for restaurant food-->
+  <ion-slides >
+    <!--*ngFor = "let storageOvernight of storageOvernightData.slice().reverse() | slice:-5"-->
+    <ion-slide>
+      <ion-card> 
+        <ion-card-header>
+          <!--insert image here-->
+          <ion-img class ="buffalo" alt="buffalo wings"src='assets/best-chicken-wings-in-Los-Angeles-Maple-Block.jpeg' style="height: 212px; width: 290px; text-align: center;"></ion-img>
+        </ion-card-header>
+    
+        <ion-card-content>
+          Buffalo Wings
+        </ion-card-content>
+        
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+
+      <ion-card style="height: 343;">
+        <ion-card-header>
+          <!--insert image here-->
+          <ion-img class ="fries" alt="fries" src='assets/FrenchFries.jpeg'></ion-img>
+        </ion-card-header>
+    
+        <ion-card-content style="height: 50%;">
+          Fries
+        </ion-card-content>
+        
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <!--insert image here-->
+          <ion-img class ="garlicFries" alt="garlicFries" src='assets/download.jpeg'></ion-img>
+        </ion-card-header>
+    
+        <ion-card-content>
+          Garlic Wings
+        </ion-card-content>
+        
+      </ion-card>
+    </ion-slide>
+
+  </ion-slides>
+
+    <!-- fab placed to the (vertical) center and end -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+ 
 
 </ion-content>
