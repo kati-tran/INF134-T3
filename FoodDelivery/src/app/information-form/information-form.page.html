@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons>
+    <ion-buttons [routerLink]="['/cart-details-page']">
       <ion-icon name="chevron-back-outline" slot="start"></ion-icon>
     </ion-buttons>
     <ion-title>
@@ -83,6 +83,6 @@
       <ion-input required type="text"></ion-input> 
     </ion-item>
     <ion-item lines="none" style="display: flex; justify-content: center;">
-      <ion-button>Confirm</ion-button>
+      <ion-button [routerLink]="['/delivery-system-status']">Confirm</ion-button>
     </ion-item>
 </ion-content>
