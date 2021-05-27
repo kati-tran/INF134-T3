@@ -1,18 +1,20 @@
-<ion-header id="header">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar id="toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button> <!--Back button testing must be done when linking starts.-->
+      </ion-buttons>
     <ion-title>Settings</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content id="content">
   <h2 id="title" style="text-align:center">App Theme Picker</h2>
-  <ion-range [(ngModel)]="sliderValue" min="1" max="5" step="1" snaps="true" color="secondary"></ion-range>
-  <div id="theme-name" style="text-align:center">
+  <ion-range (ionChange)="changeSliderVal($event.detail.value)" min="1" max="5" step="1" snaps="true" color="secondary"></ion-range>
+ 
+  <div id="dummy-text" style="text-align:center; padding: 10px">
     <h2>Theme {{sliderValue}}</h2>
-  </div>
-  
-  <div id="dummy-text" style="text-align:center">
     <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h3>
     <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p style="font-size:12px">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo...</p>
   </div>
 </ion-content>

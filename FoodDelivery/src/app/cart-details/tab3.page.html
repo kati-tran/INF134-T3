@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar style="--background:#0065A5; --color:white">
     <ion-buttons slot="start">
     <ion-back-button></ion-back-button> <!--Back button testing must be done when linking starts.-->
     </ion-buttons>
@@ -118,7 +118,7 @@
   <!--Checkout Button-->
       <ion-row *ngIf="foodItems.length!=0">
         <ion-col size="12" class="ion-text-center">
-          <ion-button [routerLink]="['/information-form']" style="--border-radius:40px; --color:rgb(255, 219, 13); text-transform: none;">
+          <ion-button [routerLink]="['/information-form']" style="--border-radius:40px; --background:#0065A5;--color:rgb(255, 219, 13); text-transform: none;">
             Proceed to Checkout
           </ion-button>
         </ion-col>
