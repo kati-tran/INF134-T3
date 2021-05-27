@@ -11,8 +11,13 @@ export class DeliverySystemStatusPage implements OnInit {
   time: BehaviorSubject<string> = new BehaviorSubject('00:00');
   timer: number; //in seconds
   progress: number;
-
   state: 'start'
+
+  clear: boolean = false;
+  clearPay: boolean = false;
+  items
+  payment
+ 
   constructor() { }
 
   ngOnInit() {
@@ -42,6 +47,54 @@ export class DeliverySystemStatusPage implements OnInit {
     //   this.startTimer(0)
     // }
   }
+  loadList(){
+    if (this.clear){
+      this.items = []
+      this.clear = false
+    }
+    else {
+      this.items =[
+        {
+          src: "assets/icon/blank.png",
+          restaurant: "Zot n Go",
+          item: "croissant",
+          price: 0.99,
+          quantity: 1
+        },
+        {
+          src: "assets/icon/drink.png",
+          restaurant: "Starbucks",
+          item: "Tall Caramel Frappuccino",
+          price: 3.99,
+          quantity: 1
+        }
+      ]
+      this.clear = true
+    }
+  }
+
+  loadPayment(){
+    if (this.clearPay){
+      this.payment = []
+      this.clearPay = false
+    }
+    else {
+      this.payment =[
+        {
+          subtotal: 4.98,
+          delivery: 2.02,
+          total: 6.98,
+          tax: 1.02,
+          tip: 3.09,
+          grandTotal: 11.11
+        },
+        
+      ]
+      this.clearPay = true
+    }
+  }
+
+  
 
   startTimer(duration:number){
     this.timer = duration * 60;
@@ -73,6 +126,8 @@ export class DeliverySystemStatusPage implements OnInit {
     }
     if (this.progress > 60){
       this.progress = 60
+      document.getElementsByClassName('status')[0].textContent = "Status: Delivered"
+    
     }
 
   }

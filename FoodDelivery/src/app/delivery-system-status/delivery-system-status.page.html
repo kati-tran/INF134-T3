@@ -2,7 +2,9 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <!-- Change defaultHref to link to page previous of it -->
-      <ion-back-button defaultHref="home"></ion-back-button> 
+      <!-- <ion-back-button [routerLink] = "['/qrcode']"></ion-back-button>  -->
+      <ion-back-button defaultHref="dashboard"></ion-back-button> 
+      <!-- <ion-back-button color="tertiary" (click)="goBack()"></ion-back-button>  -->
     </ion-buttons>
     <ion-title >Your Order</ion-title>
   </ion-toolbar>
@@ -10,111 +12,101 @@
 
 <ion-content>
 
-  <!-- <h1>{{ time | async }}</h1> -->
   <ion-progress-bar class="progressBar" value="0.3333"></ion-progress-bar>
-  <ion-title class="ion-text-center">Status: Being Prepared</ion-title>
-  <ion-title class="ion-text-center">Food Will Be Delivered In:</ion-title>
-  
-  <ion-title class="ion-text-center">{{time | async}}</ion-title>
+  <ion-label  style="text-align: center;">
+    <h1 class="status">Status: On the Way <br/></h1>
+  </ion-label>
+
+  <ion-label style="text-align: center;">
+    <h2>Food Will Be Delivered In:<br/></h2>
+  </ion-label>
+  <ion-label style="text-align: center;">
+    <h1>{{time | async}} <br/></h1>
+  </ion-label>
 
   <ion-img align="center" src="assets/icon/map.png"></ion-img>
 
-  <ion-title>Order Details</ion-title>
-
-  <ion-text>Ordered on April 20, 2021  |   Order# 420</ion-text>
+  <ion-text>
+    <h3>Order Details</h3>
+  </ion-text>
+  <ion-text>
+    <h6>Ordered on April 20, 2021  |   Order# 420</h6></ion-text>
   
-  <ion-list>
-    <ion-item>
-      <ion-label>Name: Jane Doe
-        <br/>Phone number: 678 - 999 - 8212
-        <br/>Payment Method: VISA **** 1234
-      </ion-label>
-    </ion-item>  
 
-    <ion-item button (click)="buttonClick()" detail>
-      <ion-label>
-        Order Details
-      </ion-label>
-    </ion-item>
-      <ion-list>
-        <ion-item>
-          <ion-thumbnail slot="start">
-            <img src="assets/icon/blank.png">
-          </ion-thumbnail>
-          <ion-text>Restaurant: Zot n Go <br/>Croissant <br/> Price: $0.99 <br/> Quantity: 1</ion-text>
-        </ion-item>
-
-        <ion-item>
-          <ion-thumbnail slot="start">
-            <img src="assets/icon/drink.png">
-          </ion-thumbnail>
-          <ion-text>Restaurant: Starbucks <br/>Tall Caramel Frappuccino <br/> Price: $3.99 <br/> Quantity: 1</ion-text>
-        </ion-item>
-      </ion-list>
-    
-    <ion-item button (click)="buttonClick()" detail>
-      <ion-label>
-        Payment Summary
-      </ion-label>
-    </ion-item>
-
-      <ion-list>
-        <ion-item>
-          <ion-label>Item(s) Subtotal:</ion-label>
-          <ion-note slot="end">$4.98</ion-note>
-        </ion-item>
-        <ion-item>
-          <ion-label>Deliery Fee:</ion-label>
-          <ion-note slot="end">$2.00</ion-note>
-        </ion-item>
-        <ion-item>
-          <ion-label>Total before tax:</ion-label>
-          <ion-note slot="end">$6.98</ion-note>
-        </ion-item>
-        <ion-item>
-          <ion-label>Tax:</ion-label>
-          <ion-note slot="end">$1.02</ion-note>
-        </ion-item>
-        <ion-item>
-          <ion-label>Tip:</ion-label>
-          <ion-note slot="end">$2.00</ion-note>
-        </ion-item>
-        <ion-item>
-          <ion-label>Grand Total:</ion-label>
-          <ion-note slot="end">$10.00</ion-note>
-        </ion-item>
-      </ion-list>
-
-      <ion-item button (click)="buttonClick()" detail>
+  <ion-card>
+    <ion-list>
+      <ion-item>
         <ion-label>
-          View Order
+          <h4>
+            Name: Jane Doe
+          <br/>Phone number: 678 - 999 - 8212
+          <br/>Payment Method: VISA **** 1234
+          </h4>
+        </ion-label>
+      </ion-item>  
+
+      <ion-item button (click)="loadList()" detail>
+        <ion-label>
+          <h2>Order Details</h2>
+        </ion-label>
+      </ion-item>
+        <ion-list>
+          <ion-item *ngFor="let item of items">
+            <ion-thumbnail slot="start">
+              <img src={{item.src}}>
+            </ion-thumbnail>
+            <ion-text>
+              <h6>Restaurant: {{item.restaurant}} <br/>Item: {{item.item}} <br/> Price: ${{item.price}} <br/> Quantity: {{item.quantity}}
+              </h6></ion-text>
+          </ion-item>
+
+        </ion-list>
+      
+      <ion-item button (click)="loadPayment()" detail>
+        <ion-label>
+          <h2>Payment Summary</h2>
         </ion-label>
       </ion-item>
 
-      
+        <ion-list *ngFor="let cost of payment">
+          <ion-item>
+            <ion-label><h6>Item(s) Subtotal:</h6></ion-label>
+            <ion-note slot="end">${{cost.subtotal}}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label><h6>Deliery Fee:</h6></ion-label>
+            <ion-note slot="end">${{cost.delivery}}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label><h6>Total before tax:</h6></ion-label>
+            <ion-note slot="end">${{cost.total}}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label><h6>Tax:</h6></ion-label>
+            <ion-note slot="end">${{cost.tax}}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label><h6>Tip:</h6></ion-label>
+            <ion-note slot="end">${{cost.tip}}</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label><h6>Grand Total:</h6></ion-label>
+            <ion-note slot="end">${{cost.grandTotal}}</ion-note>
+          </ion-item>
+        </ion-list>
 
-  </ion-list>
-  
-  
+        <ion-item button detail>
+          <ion-label [routerLink] = "['/qrcode']">
+            <h2>View Order</h2>
+          </ion-label>
+        </ion-item>
 
+        <ion-item button detail>
+          <ion-label color="danger" [routerLink] = "['/cancellation']">
+            <h2>Cancel Order</h2>
+          </ion-label>
+        </ion-item>
+    </ion-list>
+  </ion-card>
   
-  <!-- <ion-list>
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>Item</ion-label>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-item-option (click)="unread(item)">Unread</ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-  
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>Item</ion-label>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-item-option (click)="unread(item)">Unread</ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-  </ion-list>  -->
 </ion-content>
