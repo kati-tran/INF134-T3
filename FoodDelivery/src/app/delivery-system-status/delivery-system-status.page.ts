@@ -116,7 +116,11 @@ export class DeliverySystemStatusPage implements OnInit {
     --this.timer;
     ++this.progress
     // console.log(this.progress)
-    document.getElementsByClassName('progressBar')[0]["value"] = this.progress/60
+    if (document.getElementsByClassName('progressBar')[0] != undefined){
+      document.getElementsByClassName('progressBar')[0]["value"] = this.progress/60
+    }
+    // console.log(document.getElementsByClassName('progressBar')[0])
+    // document.getElementsByClassName('progressBar')[0]["value"] = this.progress/60
     // console.log(this.timer)
 
 
