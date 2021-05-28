@@ -27,7 +27,7 @@ export class RestaurantRollerDonePage implements OnInit {
 
     loading.onDidDismiss().then((dis) => {
       console.log('Loading dismissed! after 2 Seconds', dis);
-      let restaurantimg = <HTMLInputElement>document.getElementById("imgradius");
+      let restaurantimg = <HTMLInputElement>document.getElementById("img1");
       let restaurantdetails = <HTMLInputElement>document.getElementById("img2");
       if(this.checkItem == 0){
         restaurantimg.src = "../../assets/images/chipotleroller.png";
