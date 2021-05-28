@@ -1,9 +1,23 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons  slot="start">
+      <ion-back-button color="tertiary" (click)="goBack()"></ion-back-button>
+    </ion-buttons>
     <ion-title>QRCode</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-label  style="text-align: center;">
+    <h1>Order Delivered!</h1>
+  </ion-label>
+  <ion-img align="center" src="assets/icon/QR.png"></ion-img>
+  <ion-label  style="text-align: center;">
+    <h6>Ordered on April 20, 2021  |   Order# 420 <br/></h6>
+  </ion-label>
+  <ion-label  style="text-align: center;">
+    <h1>To receive your order, please scan the QR code for verification.</h1>
+  </ion-label>
 
+  <ion-img align="center" src="assets/icon/bot.png"></ion-img>
 </ion-content>
