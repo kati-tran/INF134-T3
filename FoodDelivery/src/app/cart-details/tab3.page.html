@@ -10,12 +10,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Cart Details</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <!--List of Food Items-->
   <div class="center-text" *ngIf="foodItems.length==0; else showItems">
     <ion-icon class="cart-icon" name="cart-outline"></ion-icon>
