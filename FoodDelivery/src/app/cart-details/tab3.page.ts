@@ -9,19 +9,14 @@ import {FoodItem} from './fooditem'
 export class Tab3Page {
 
   foodItems = []
-  numItems = 10
+  numItems = 5
   subtotal = 0.00
   deliveryFee = 2.99
   taxRate = 0.0775
   tax = 0.00
   tip = 0.00
 
-  constructor(){
-    for(var i = 0; i < this.numItems; i++)
-    {
-      this.foodItems.push(new FoodItem(i,"Item" + i,(5.67*i).toFixed(2),["mod1", "mod2", "mod3", "mod4"]))
-    }
-  }
+  constructor(){}
 
   public deleteItem(itemNum)
   {
