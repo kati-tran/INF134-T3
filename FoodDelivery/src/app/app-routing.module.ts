@@ -11,6 +11,14 @@ const routes: Routes = [
     loadChildren: () => import('./app-opening/app-opening.module').then( m => m.AppOpeningPageModule)
   },
   {
+    path: 'dashboard',
+    loadChildren: ()=> import('./dashboard/tab1.module').then(m => m.Tab1PageModule)
+  },
+  {
+    path: 'restaurant-page',
+    loadChildren: () => import('./restaurant-page/tab2.module').then(m => m.Tab2PageModule)
+  },
+  {
     path: 'information-form',
     loadChildren: () => import('./information-form/information-form.module').then( m => m.InformationFormPageModule)
   },

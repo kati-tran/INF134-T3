@@ -6,10 +6,10 @@ const routes: Routes = [
   {
     path: 'tabs',
     component: TabsPage,
-    children: [
+    children:[
       {
         path: 'tab1',
-        loadChildren: () => import('../dashboard/tab1.module').then(m => m.Tab1PageModule)
+        loadChildren: () => import('../settings/settings.module').then(m => m.SettingsPageModule)
       },
       {
         path: 'tab2',
