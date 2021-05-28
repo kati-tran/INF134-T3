@@ -21,13 +21,9 @@ export class DeliverySystemStatusPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // console.log(document.getElementsByClassName('ion-text-center').length)
-    // console.log(document.getElementsByClassName('ion-text-center')[0].innerHTML)
-    // console.log(document.getElementsByClassName('progressBar'))
-    // console.log(document.getElementsByClassName('progressBar')[0]["value"])
+
     this.timer = 1 * 60;
     this.progress = 1;
-    //document.getElementsByClassName('progressBar')[0]["value"] = 100
     setInterval( ()=> {
       this.updateTimeValue()
     }, 1000);
@@ -43,9 +39,7 @@ export class DeliverySystemStatusPage implements OnInit {
 
     --this.timer;
 
-    // if (this.timer < 0){
-    //   this.startTimer(0)
-    // }
+
   }
   loadList(){
     if (this.clear){
@@ -55,19 +49,27 @@ export class DeliverySystemStatusPage implements OnInit {
     else {
       this.items =[
         {
-          src: "assets/icon/blank.png",
-          restaurant: "Zot n Go",
-          item: "croissant",
-          price: 0.99,
+          src: "assets/icon/wings.png",
+          restaurant: "Buffalo Wild Wings",
+          item: "Buffalo Wings",
+          price: 3.99,
           quantity: 1
         },
         {
-          src: "assets/icon/drink.png",
-          restaurant: "Starbucks",
-          item: "Tall Caramel Frappuccino",
+          src: "assets/icon/blank.png",
+          restaurant: "Buffalo Wild Wings",
+          item: "Fries",
+          price: 1.99,
+          quantity: 1
+        },
+        {
+          src: "assets/icon/garlic.png",
+          restaurant: "Buffalo Wild Wings",
+          item: "Garlic Wings",
           price: 3.99,
           quantity: 1
         }
+        
       ]
       this.clear = true
     }
@@ -81,12 +83,12 @@ export class DeliverySystemStatusPage implements OnInit {
     else {
       this.payment =[
         {
-          subtotal: 4.98,
+          subtotal: 9.97,
           delivery: 2.02,
-          total: 6.98,
-          tax: 1.02,
+          total: 11.99,
+          tax: 1.01,
           tip: 3.09,
-          grandTotal: 11.11
+          grandTotal: 16.09
         },
         
       ]
@@ -114,18 +116,8 @@ export class DeliverySystemStatusPage implements OnInit {
     this.time.next(text);
 
     --this.timer;
-    // ++this.progress
-    // console.log(this.progress)
-    // if (document.getElementsByClassName('progressBar')[0] != undefined){
-    //   document.getElementsByClassName('progressBar')[0]["value"] = this.progress/60
-    // }
-    // // console.log(document.getElementsByClassName('progressBar')[0])
-    // document.getElementsByClassName('progressBar')[0]["value"] = this.progress/60
-    // console.log(this.timer)
-
-
+    
     if (this.timer < 0){
-      //this.startTimer(50)
       this.timer = 0;
       if (document.getElementsByClassName('status')[0] != undefined){
         document.getElementsByClassName('status')[0].innerHTML = "Status: Delivered"

@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar style="--background:#0065A5; --color:white">
     <ion-buttons slot="start">
-    <ion-back-button></ion-back-button> <!--Back button testing must be done when linking starts.-->
+    <ion-back-button style="--color: white"></ion-back-button> <!--Back button testing must be done when linking starts.-->
     </ion-buttons>
     <ion-title>
       Restaurant Name
@@ -27,7 +27,7 @@
         <button (click)="item.decQuantity()" class=increment type="button" name="button">
           <ion-icon name="remove-outline"></ion-icon>
         </button>
-        <input (change)="item.setQuantity($event.target.value)" (focusout)="resetQuantity($event.target, item.num)" type="text" name="name" value={{item.quantity}} maxlength="2" size="1" style="text-align: center; font-size:12px;">
+        <input class= "input" (change)="item.setQuantity($event.target.value)" (focusout)="resetQuantity($event.target, item.num)" type="text" name="name" value={{item.quantity}} maxlength="2" size="1" style="text-align: center; font-size:12px;">
         <button (click)="item.incQuantity()" class=increment type="button" name="button">
           <ion-icon name="add-outline"></ion-icon>
         </button>
@@ -41,7 +41,7 @@
             </ion-label>
           </ion-col>
           <ion-col>
-            <h4>${{item.price}}</h4>
+            <h4>${{(item.price*item.quantity).toFixed(2)}}</h4>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -92,7 +92,7 @@
         <ion-label class="ion-float-right">
           <span style="font-weight: bold; font-size:12px">
             $
-            <input (change)="setTip($event.target.value)" (focusout)="resetTip($event.target)"  type="text" name="name" value={{tip.toFixed(2)}} maxlength="6" size="3" style="text-align: center; font-size:12px;">
+            <input class="input" (change)="setTip($event.target.value)" (focusout)="resetTip($event.target)"  type="text" name="name" value={{tip.toFixed(2)}} maxlength="6" size="3" style="text-align: center; font-size:12px;">
           </span>
         </ion-label>
       </ion-col>
