@@ -6,4 +6,27 @@
 
 <ion-content>
 
+  <ion-list lines="none">
+    <ion-item style= "padding-top: 5vh;" >
+      <ion-text style="font-size: 40px; font-weight:bold;" >
+        Are you sure you want to <span style="color: red;">cancel</span>
+        your order?
+      </ion-text>
+    </ion-item>
+
+    <ion-item style="padding-top: 5vh;">
+      <ion-img class ="peter" alt="fries" src='assets/peter.jpeg' style="height: 40; width: 40;" ></ion-img>
+    </ion-item>
+  </ion-list>
+
+  <ion-list lines="none">
+    <ion-item>
+       <ion-button [routerLink]= "['/dashboard']"
+        size = "large" color="success" id="confirm" >Confirm</ion-button>
+    </ion-item>
+   <ion-item>
+      <ion-button  size = "large" id="skip" [routerLink]= "['/delivery-system-status']"> Cancel</ion-button>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

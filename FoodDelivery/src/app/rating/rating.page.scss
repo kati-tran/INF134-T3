@@ -1,3 +1,41 @@
+
 ion-content{
     --ion-background-color:#0D3955;
+    text-align: center;
+}
+ion-item > ion-text{
+    color: white;
+    margin-top: 25%;
+    font-weight: bolder;
+    font-size: 35px;
+    text-align: center;
+}
+.stars {
+    margin-top: 50%;
+    // color: #FFD301;
+}
+.stars > ion-icon {
+    color: #FFD301;
+    width:60px;
+    height: 60px;
+    text-align: center;
+
+}
+ion-button{
+    margin:auto;
+}
+ion-item > ion-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+ion-list > ion-item{
+    padding-bottom: 20px;
+}
+ion-list{
+    padding-top:10vh;
+}
+#skip{
+    --background: red;
 }

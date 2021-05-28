@@ -1,15 +1,34 @@
-<ion-header style="background-color: green;">
+<ion-header>
   <ion-toolbar>
     <ion-title>Rating</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content >
-  <ion-icon name="star-outline"></ion-icon>
-  <ion-icon name="star-outline"></ion-icon>
-  <ion-icon name="star-outline"></ion-icon>
-  <ion-icon name="star-outline"></ion-icon>
-  <ion-icon name="star-outline"></ion-icon>
-  
+
+
+  <ion-item lines="none">
+    <ion-text>Rate you experience with us!</ion-text>
+  </ion-item>
+
+
+  <!--When each star is pressed, fill with -->
+  <ion-item-group class="stars">
+    <ion-icon name="star" id="star1"></ion-icon>
+    <ion-icon name="star" id="star2"></ion-icon>
+    <ion-icon name="star" id="star3"></ion-icon>
+    <ion-icon name="star" id="star4"></ion-icon>
+    <ion-icon name="star" id="star5"></ion-icon>
+  </ion-item-group>
+
+
+ <ion-list lines="none">
+    <ion-item>
+       <ion-button size = "large" color="success" id="confirm" >Confirm</ion-button>
+    </ion-item>
+   <ion-item>
+      <ion-button size = "large" id="skip">Skip</ion-button>
+    </ion-item>
+  </ion-list>
 
 </ion-content>

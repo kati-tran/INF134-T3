@@ -1,0 +1,13 @@
+*{
+    text-align: center;;
+}
+ion-item > ion-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto
+    
+}
+ion-list > ion-item{
+    padding-bottom: 20px;
+}
