@@ -23,8 +23,8 @@ export class DeliverySystemStatusPage implements OnInit {
   ngOnInit() {
     // console.log(document.getElementsByClassName('ion-text-center').length)
     // console.log(document.getElementsByClassName('ion-text-center')[0].innerHTML)
-    console.log(document.getElementsByClassName('progressBar'))
-    console.log(document.getElementsByClassName('progressBar')[0]["value"])
+    // console.log(document.getElementsByClassName('progressBar'))
+    // console.log(document.getElementsByClassName('progressBar')[0]["value"])
     this.timer = 1 * 60;
     this.progress = 1;
     //document.getElementsByClassName('progressBar')[0]["value"] = 100
@@ -114,12 +114,12 @@ export class DeliverySystemStatusPage implements OnInit {
     this.time.next(text);
 
     --this.timer;
-    ++this.progress
+    // ++this.progress
     // console.log(this.progress)
-    if (document.getElementsByClassName('progressBar')[0] != undefined){
-      document.getElementsByClassName('progressBar')[0]["value"] = this.progress/60
-    }
-    // console.log(document.getElementsByClassName('progressBar')[0])
+    // if (document.getElementsByClassName('progressBar')[0] != undefined){
+    //   document.getElementsByClassName('progressBar')[0]["value"] = this.progress/60
+    // }
+    // // console.log(document.getElementsByClassName('progressBar')[0])
     // document.getElementsByClassName('progressBar')[0]["value"] = this.progress/60
     // console.log(this.timer)
 
@@ -127,6 +127,7 @@ export class DeliverySystemStatusPage implements OnInit {
     if (this.timer < 0){
       //this.startTimer(50)
       this.timer = 0;
+      document.getElementsByClassName('status')[0].textContent = "Status: Delivered"
     }
     if (this.progress > 60){
       this.progress = 60
