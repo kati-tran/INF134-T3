@@ -6,10 +6,11 @@ const routes: Routes = [
   {
     path: 'tabs',
     component: TabsPage,
-    children: [
+    children:[
       {
         path: 'tab1',
-        loadChildren: () => import('../cancellation/cancellation.module').then(m => m.CancellationPageModule)
+
+        loadChildren: () => import('../settings/settings.module').then(m => m.SettingsPageModule)
       },
       {
         path: 'tab2',

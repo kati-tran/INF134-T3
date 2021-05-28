@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./information-form.page.scss'],
 })
 export class InformationFormPage implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
