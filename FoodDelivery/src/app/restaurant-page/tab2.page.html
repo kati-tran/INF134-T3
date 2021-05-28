@@ -3,19 +3,20 @@
     <ion-title>
       Restaurant Page
     </ion-title>
+
+    <ion-buttons [routerLink]="['/dashboard']">
+      <ion-icon name="chevron-back-outline" slot="start"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-        <!--Basic: auto-select the icon based on the platform -->
-      <ion-icon name="arrow-back" style="padding-left: 20px; font-size: 25px;"></ion-icon>
-      <ion-title size="medium" style="padding-bottom: 100%;">Current Location</ion-title>
-      <ion-title size="small">Donald Bren Hall</ion-title>
-    </ion-toolbar>
 
-  </ion-header>
+<ion-content [fullscreen]="true">
+
+        <!--Basic: auto-select the icon based on the platform -->
+      <!-- <ion-icon name="arrow-back" (click) = "goBack()" style="padding-left: 20px; font-size: 25px;"></ion-icon> -->
+
+
 
 
   <ion-card-header style="text-align: center;" class="logo">
@@ -23,7 +24,7 @@
     <ion-img src='assets/buffalo wild wings.png' style="height: 212px; width: 290px; text-align: center;"></ion-img>
   </ion-card-header>
 
-  <ion-item style="padding: 1px 40px 10px 40px;">
+  <ion-item>
     <ion-label className="ion-text-wrap">
       <ion-text color="black" style="text-align: center;" >
         <h3 style="text-align: center; background-color: grey; border-radius: 10px; padding-top: 10px; padding-bottom: 10px;" >123 Campus Dr.<br>
@@ -47,6 +48,11 @@
         <ion-card-content>
           Buffalo Wings
         </ion-card-content>
+<!--           
+        <ion-item class="addToCartItemContainer">
+        </ion-item> -->
+        <ion-button class="addToCart" (click) = "presentAlert()" expand="block">Add to Cart</ion-button>
+
         
       </ion-card>
     </ion-slide>
@@ -63,6 +69,9 @@
           Fries
         </ion-card-content>
         
+        <ion-item class="addToCartItemContainer">
+          <ion-button class="addToCart" (click) = "presentAlert()" expand="block">Add to Cart</ion-button>
+        </ion-item>
       </ion-card>
     </ion-slide>
 
@@ -77,6 +86,9 @@
           Garlic Wings
         </ion-card-content>
         
+        <ion-item class="addToCartItemContainer">
+          <ion-button class="addToCart" (click) = "presentAlert()" expand="block">Add to Cart</ion-button>
+        </ion-item>
       </ion-card>
     </ion-slide>
 
