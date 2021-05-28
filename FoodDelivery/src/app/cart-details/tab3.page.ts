@@ -16,8 +16,7 @@ export class Tab3Page {
   tax = 0.00
   tip = 0.00
 
-  constructor()
-  {
+  constructor(){
     for(var i = 0; i < this.numItems; i++)
     {
       this.foodItems.push(new FoodItem(i,"Item" + i,(5.67*i).toFixed(2),["mod1", "mod2", "mod3", "mod4"]))
@@ -87,6 +86,13 @@ export class Tab3Page {
       input.value = (0).toFixed(2)
       this.tip = 0.00
     } 
+  }
+
+  ngOnInit() {
+    for(var i = 0; i < this.numItems; i++)
+    {
+      this.foodItems.push(new FoodItem(i,"Item" + i,(5.67*i).toFixed(2),["mod1", "mod2", "mod3", "mod4"]))
+    }
   }
 }
 
