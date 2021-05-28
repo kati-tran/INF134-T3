@@ -1,0 +1,56 @@
+ion-content {
+    --overflow: hidden;
+    --background: #fff url('../../assets/images/appopening.png') no-repeat center center / cover;
+}
+
+#title {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 49%;
+    font-family: Montserrat !important;
+  }
+.firstword{
+    color: #FFD301;
+    display: inline-block;
+}
+.secondword{
+    color:#0065A5;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+  h1{
+      font-size: 35px !important;
+      -webkit-text-stroke: 1px #bc990083;
+  }
+
+#logo{
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 26%;
+}
+
+#actualpicture{
+    width: 55%;
+    height: 55%;
+}
+
+#beginbutton{
+    text-align: center;
+    position: absolute;
+    top: 85%;
+    right: 0%;
+    left: 0;
+}
+
+#getstarted{
+    --color:black;
+    --border-color:black !important;
+    --border-width: 1px;
+    //--padding-start:100%;
+    //--padding-end:100%;
+}

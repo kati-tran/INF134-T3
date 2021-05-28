@@ -11,14 +11,6 @@ const routes: Routes = [
     loadChildren: () => import('./app-opening/app-opening.module').then( m => m.AppOpeningPageModule)
   },
   {
-    path: 'dashboard',
-    loadChildren: ()=> import('./dashboard/tab1.module').then(m => m.Tab1PageModule)
-  },
-  {
-    path: 'restaurant-page',
-    loadChildren: () => import('./restaurant-page/tab2.module').then(m => m.Tab2PageModule)
-  },
-  {
     path: 'information-form',
     loadChildren: () => import('./information-form/information-form.module').then( m => m.InformationFormPageModule)
   },
@@ -47,6 +39,10 @@ const routes: Routes = [
     loadChildren: () => import('./rating/rating.module').then( m => m.RatingPageModule)
   },
   {
+    path: 'modal-app-opening',
+    loadChildren: () => import('./modal-app-opening/modal-app-opening.module').then( m => m.ModalAppOpeningPageModule)
+  },
+  {
     path: 'dashboard',
     loadChildren: ()=> import('./dashboard/tab1.module').then(m => m.Tab1PageModule)
   },
@@ -55,8 +51,12 @@ const routes: Routes = [
     loadChildren: () => import('./restaurant-page/tab2.module').then(m => m.Tab2PageModule)
   },
   {
-    path: 'cart-details-page',
+    path: 'cart-details',
     loadChildren: () => import('./cart-details/tab3.module').then(m => m.Tab3PageModule)
+  },
+  {
+    path: 'restaurant-roller-done',
+    loadChildren: () => import('./restaurant-roller-done/restaurant-roller-done.module').then( m => m.RestaurantRollerDonePageModule)
   }
 ];
 @NgModule({

@@ -6,19 +6,18 @@ const routes: Routes = [
   {
     path: 'tabs',
     component: TabsPage,
-    children:[
+    children: [
       {
         path: 'tab1',
-
-        loadChildren: () => import('../settings/settings.module').then(m => m.SettingsPageModule)
+        loadChildren: () => import('../app-opening/app-opening.module').then(m => m.AppOpeningPageModule)
       },
       {
         path: 'tab2',
-        loadChildren: () => import('../restaurant-page/tab2.module').then(m => m.Tab2PageModule)
+        loadChildren: () => import('../dashboard/tab1.module').then(m => m.Tab1PageModule)
       },
       {
         path: 'tab3',
-        loadChildren: () => import('../rating/rating.module').then(m => m.RatingPageModule)
+        loadChildren: () => import('../Cart-Details/tab3.module').then(m => m.Tab3PageModule)
       },
       {
         path: '',
