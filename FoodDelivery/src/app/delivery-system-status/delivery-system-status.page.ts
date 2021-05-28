@@ -127,11 +127,13 @@ export class DeliverySystemStatusPage implements OnInit {
     if (this.timer < 0){
       //this.startTimer(50)
       this.timer = 0;
-      document.getElementsByClassName('status')[0].textContent = "Status: Delivered"
+      if (document.getElementsByClassName('status')[0] != undefined){
+        document.getElementsByClassName('status')[0].innerHTML = "Status: Delivered"
+      }
     }
     if (this.progress > 60){
       this.progress = 60
-      document.getElementsByClassName('status')[0].textContent = "Status: Delivered"
+      document.getElementsByClassName('status')[0].innerHTML = "Status: Delivered"
     
     }
 
