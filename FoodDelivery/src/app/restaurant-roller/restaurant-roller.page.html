@@ -1,9 +1,23 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>RestaurantRoller</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Restaurant Roller</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <img id="imgradius" src="../../assets/images/radius1.png">
+  <div class="textp">
+    <p><b>Can’t pick where to eat?</b></p>
+      <p>Insert your desired delivery mile radius and have the Restaurant Roller randomly decide for you!</p>
+
+        <ion-range (ionChange)="changeMap($event)" pin min="1" max="5" step="2" value="1" snaps="true" color="danger">
+          <h6 slot="start"><b>Mile Radius:</b></h6>
+        </ion-range>
+  </div>
+  <ion-button (click)="presentLoading()" id="confirmlocation" strong="true" shape="round">ROLL!</ion-button>
+
 
 </ion-content>

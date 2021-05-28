@@ -1,17 +1,84 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/settings']">
+        <ion-icon slot="icon-only" name="settings-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/restaurant-roller']">
+        <ion-icon slot="icon-only" name="dice-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  
     <ion-title>
-      Dashboard
+      <div>CURRENT LOCATION</div>
+      <div (click)="presentModal()"><ion-icon id="locationicon" name="location-outline"></ion-icon><u>Donald Bren Hall</u></div>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+
+<ion-content [fullscreen]="true" can-swipe-back="false">
+  
+  <div>
+      <p class="sectionname"><b>Your Favorites</b></p>
+    <ion-slides pager="false" [options]="slideOpts">
+      <ion-slide [routerLink]="['/restaurant-page']">
+          <img src="../../assets/images/DelSushi.png">
+      </ion-slide>
+      <ion-slide [routerLink]="['/restaurant-page']">
+        <img src="../../assets/images/Chipotle.png">
+      </ion-slide>
+      <ion-slide [routerLink]="['/restaurant-page']">
+        <img src="../../assets/images/Wendys.png">
+      </ion-slide>
+    </ion-slides>
+    <div class="line"></div>
+  </div>
+
+<br>
+
+  <div>
+    <p class="sectionname"><b>Nearby</b></p>
+  <ion-slides pager="false" [options]="slideOpts">
+    <ion-slide [routerLink]="['/restaurant-page']">
+        <img src="../../assets/images/Subway.png">
+    </ion-slide>
+    <ion-slide [routerLink]="['/restaurant-page']">
+      <img src="../../assets/images/Wendys.png">
+    </ion-slide>
+    <ion-slide [routerLink]="['/restaurant-page']">
+      <img src="../../assets/images/DelSushi.png">
+    </ion-slide>
+  </ion-slides>
+  <div class="line"></div>
+</div>
+<br>
+
+<div>
+  <p class="sectionname"><b>Popular</b></p>
+<ion-slides pager="false" [options]="slideOpts">
+  <ion-slide [routerLink]="['/restaurant-page']">
+      <img src="../../assets/images/ChickfilA.png">
+  </ion-slide>
+  <ion-slide [routerLink]="['/restaurant-page']">
+    <img src="../../assets/images/PandaExpress.png">
+  </ion-slide>
+  <ion-slide [routerLink]="['/restaurant-page']">
+    <img src="../../assets/images/DelSushi.png">
+  </ion-slide>
+</ion-slides>
+<div class="line"></div>
+</div>
+<br>
+<br>
+<!--
+  <ion-button shape="round" [routerLink]="['/restaurant-roller']">
+    <img id="diceimg" src="../../assets/images/dice-512.png">
+    Not Sure? RANDOMIZE!
+  </ion-button>
+  <br>
+  <br>-->
 </ion-content>

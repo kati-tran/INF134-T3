@@ -1,0 +1,57 @@
+ion-toolbar, ion-header {
+    --min-height: 50px;
+    --background: #0065A5;
+}
+
+ion-toolbar, ion-title{
+    font-size: 85% !important;
+    font-family: Livvic;
+    color:white;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+ion-content{
+    --overflow: hidden;
+}
+
+ion-icon{
+    color: white;
+}
+
+ion-slides {
+    height: 75%;
+    width: 155%;
+    right: 40%;
+    padding-left: 10px
+}
+
+.diceimg{
+    width: 10%;
+    height: 10%;
+}
+
+.sectionname{
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px
+}
+
+.line{
+    width: 95%;
+    padding-top: 20px;
+    text-align: center;
+    left: 3%;
+    right: 0;
+    border-bottom: 1px solid #b8b8b8;
+    position: absolute;
+}
+
+#locationicon{
+    top:50%;
+}

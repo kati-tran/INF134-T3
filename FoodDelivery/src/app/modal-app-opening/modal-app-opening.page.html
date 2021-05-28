@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>DROP YOUR PIN TO BEGIN!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div id="container">
+  <img (click)="getCoordinates($event)" id="googlemaps" src="../../assets/images/googlemaps.png">
+  <ion-searchbar id="locationsearch" showCancelButton="focus"></ion-searchbar>
+  <ion-icon id="pinpoint" name="location-sharp" size="large"></ion-icon>
+  <ion-button [routerLink]="['/dashboard']" (click)="closeModal()" id="confirmlocation" strong="true" shape="round">CONFIRM</ion-button>
+</div>
+</ion-content>

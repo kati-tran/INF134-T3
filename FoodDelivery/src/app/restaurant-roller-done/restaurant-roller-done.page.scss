@@ -19,11 +19,14 @@ ion-back-button{
     padding: 10px;
 }
 
-.textp{
+#img2{
     top: 35%;
+    left: 0;
+    right: 0;
     position: absolute;
-    padding: 10px;
+    padding: 30px;
 }
+
 
 ion-range{
     padding: 0;
@@ -40,6 +43,18 @@ ion-range{
     position: absolute;
     --color: #FFD301;
 }
+
+#moreinformation{
+    z-index:10;   
+    top: 75%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    --background: #0065A5;
+    position: absolute;
+    --color: #FFD301;
+}
+
 
 .loader{
     --background: rgba(255, 255, 255, 0);
