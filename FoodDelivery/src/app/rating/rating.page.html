@@ -24,10 +24,10 @@
 
  <ion-list lines="none">
     <ion-item>
-       <ion-button size = "large" color="success" id="confirm" >Confirm</ion-button>
+       <ion-button [routerLink]="['/dashboard']" size = "large" color="success" id="confirm" >Confirm</ion-button>
     </ion-item>
    <ion-item>
-      <ion-button size = "large" id="skip">Skip</ion-button>
+      <ion-button [routerLink]="['/cart-details']" size = "large" id="skip">Skip</ion-button>
     </ion-item>
   </ion-list>
 
