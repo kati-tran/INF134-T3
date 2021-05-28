@@ -1,9 +1,88 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>InformationForm</ion-title>
+    <ion-buttons [routerLink]="['/cart-details-page']">
+      <ion-icon name="chevron-back-outline" slot="start"></ion-icon>
+    </ion-buttons>
+    <ion-title>
+      <h3 align="center">Your Information</h3>
+    </ion-title> 
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+    <ion-item lines="none" style="height: 7%;">
+      <ion-label style="font-family: Livvic; font-size: 10pt; font-weight: bold; color: black;">
+        First Name
+      </ion-label>
+      <ion-label style="font-family: Livvic; font-size: 10pt; font-weight: bold; color: black; margin-left: 15%;">
+        Last Name
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none" style="height: 7%;">
+      <ion-input required type="text" slot="start"></ion-input> 
+      <ion-input required type="text"></ion-input>
+    </ion-item>
+    <ion-item lines="none" style="height: 7%;">
+      <ion-label style="font-family: Livvic; font-size: 10pt; font-weight: bold; color: black;">
+        Phone Number
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none" style="height: 7%;">
+      <ion-input required type="text"></ion-input> 
+    </ion-item>
+    <ion-item lines="none" style="height: 7%;">
+      <ion-label style="font-family: Livvic; font-size: 10pt; font-weight: bold; color: black;">
+        Delivery Location
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none" style="height: 7%;">
+      <ion-input required type="text" placeholder=" Search for a location">
+        <ion-icon name="search-outline" style="color: #828282;"></ion-icon>
+      </ion-input> 
+    </ion-item>
+    <ion-item lines="none">
+      <ion-img src="https://uci.edu/visit/img/visit-interactive-map-800x480.jpg"></ion-img>
+    </ion-item>
+    
+    <ion-item lines="none" style="height: 7%;">
+      <ion-label style="font-family: Livvic; font-size: 10pt; font-weight: bold; color: black;">
+        Card Holder
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none" style="height: 7%;">
+      <ion-input required type="text">
+        <ion-icon name="card-outline" style="color: #828282;"></ion-icon>
+      </ion-input> 
+    </ion-item>
+    <ion-item lines="none" style="height: 7%;">
+      <ion-label style="font-family: Livvic; font-size: 10pt; font-weight: bold; color: black;">
+        Card Number
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none" style="height: 7%;">
+      <ion-input required type="text"></ion-input> 
+    </ion-item>
+    <ion-item lines="none" style="height: 7%;">
+      <ion-label style="font-family: Livvic; font-size: 10pt; font-weight: bold; color: black;">
+        Expiration Date
+      </ion-label>
+      <ion-label style="font-family: Livvic; font-size: 10pt; font-weight: bold; color: black; margin-left: 15%;">
+        CVV
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none" style="height: 7%;">
+      <ion-input required type="month" slot="start" style="width: 30%;"></ion-input> 
+      <ion-input required type="text"></ion-input>
+    </ion-item>
+    <ion-item lines="none" style="height: 7%;">
+      <ion-label style="font-family: Livvic; font-size: 10pt; font-weight: bold; color: black;">
+        Billing Address
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none" style="height: 7%;">
+      <ion-input required type="text"></ion-input> 
+    </ion-item>
+    <ion-item lines="none" style="display: flex; justify-content: center;">
+      <ion-button [routerLink]="['/delivery-system-status']">Confirm</ion-button>
+    </ion-item>
 </ion-content>
