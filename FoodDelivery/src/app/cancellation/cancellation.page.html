@@ -21,10 +21,11 @@
 
   <ion-list lines="none">
     <ion-item>
-       <ion-button size = "large" color="success" id="confirm" >Confirm</ion-button>
+       <ion-button [routerLink]= "['/dashboard']"
+        size = "large" color="success" id="confirm" >Confirm</ion-button>
     </ion-item>
    <ion-item>
-      <ion-button size = "large" id="skip">Cancel</ion-button>
+      <ion-button  size = "large" id="skip" [routerLink]= "['/delivery-system-status']"> Cancel</ion-button>
     </ion-item>
   </ion-list>
 
