@@ -31,6 +31,7 @@ export class RestaurantRollerDonePage implements OnInit {
       let restaurantdetails = <HTMLInputElement>document.getElementById("img2");
       if(this.checkItem == 0){
         restaurantimg.src = "../../assets/images/chipotleroller.png";
+        restaurantimg.src = "../../assets/images/chipotleroller.png";
         restaurantdetails.src = "../../assets/images/chipotlerollerdetails.png";
         this.checkItem = 1;
         console.log("../../assets/images/chipotleroller.png")
