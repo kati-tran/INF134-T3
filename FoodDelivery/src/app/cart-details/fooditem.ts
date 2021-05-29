@@ -20,7 +20,12 @@ export class FoodItem {
     {
         var modString = ""
         for (var i = 0; i < this.appliedModifiers.length; i++)
-            modString = modString + this.appliedModifiers[i] + ", "
+        {
+            if (i != (this.appliedModifiers.length-1))
+                modString = modString + this.appliedModifiers[i] + ", "
+            else
+                modString = modString + this.appliedModifiers[i]
+        }
 
         return modString
     }
