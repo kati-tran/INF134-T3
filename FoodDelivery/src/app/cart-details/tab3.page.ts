@@ -86,8 +86,7 @@ export class Tab3Page {
   ngOnInit() {
       this.foodItems.push(new FoodItem(0,"Buffalo Wings", 3.99,["Boneless", "No Dip"]))
       this.foodItems.push(new FoodItem(1,"Fries", 1.99,["Regular Size"]))
-      this.foodItems.push(new FoodItem(2,"Garlic Wings", 3.99,["w/ Celery", "Ranch dip"]))
-    
+      this.foodItems.push(new FoodItem(2,"Garlic Wings", 3.99,["w/ Celery", "Ranch dip"]))  
   }
 }
 
