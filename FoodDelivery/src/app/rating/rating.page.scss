@@ -5,7 +5,7 @@ ion-content{
 }
 ion-item > ion-text{
     color: white;
-    margin-top: 25%;
+    // margin-top: 25%;
     font-weight: bolder;
     font-size: 35px;
     text-align: center;
@@ -15,7 +15,8 @@ ion-item > ion-text{
     // color: #FFD301;
 }
 .stars > ion-icon {
-    color: #FFD301;
+    // color: #FFD301;
+    color: #ffffff;
     width:60px;
     height: 60px;
     text-align: center;
@@ -39,3 +40,4 @@ ion-list{
 #skip{
     --background: red;
 }
+

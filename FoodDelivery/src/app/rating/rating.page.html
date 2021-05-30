@@ -8,23 +8,66 @@
 
 
   <ion-item lines="none">
-    <ion-text>Rate you experience with us!</ion-text>
+    <ion-text>Rate your experience with us!</ion-text>
   </ion-item>
 
 
   <!--When each star is pressed, fill with -->
-  <ion-item-group class="stars">
+  <!-- <ion-item-group class="stars"> -->
+    <!-- <ion-icon name="star" id="star1"></ion-icon></div>
     <ion-icon name="star" id="star1"></ion-icon>
     <ion-icon name="star" id="star2"></ion-icon>
     <ion-icon name="star" id="star3"></ion-icon>
     <ion-icon name="star" id="star4"></ion-icon>
-    <ion-icon name="star" id="star5"></ion-icon>
-  </ion-item-group>
+    <ion-icon name="star" id="star5"></ion-icon> -->
+
+    <!-- <ionic5-star-rating la-star-rating #rating
+    activeIcon = "ios-star"
+    defaultIcon = "ios-star-outline"
+    activeColor = "#488aff" 
+    defaultColor = "#f4f4f4"
+    readonly="false"
+    rating="3"
+    fontSize = "32px"
+    (click)="logRatingChange($event)">
+    </ionic5-star-rating> -->
+
+
+      <ion-radio-group value="stars">
+    
+        <ion-item>
+          <ion-label>⭐️</ion-label>
+          <ion-radio slot="start" value="star1"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>⭐️⭐️</ion-label>
+          <ion-radio slot="start" value="star2"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>⭐️⭐️⭐️</ion-label>
+          <ion-radio slot="start" value="star3"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>⭐️⭐️⭐️⭐️</ion-label>
+          <ion-radio slot="start" value="star4"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>⭐️⭐️⭐️⭐️⭐️</ion-label>
+          <ion-radio slot="start" value="star5"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+  <!-- </ion-item-group> -->
+
+  
 
 
  <ion-list lines="none">
     <ion-item>
-       <ion-button [routerLink]="['/dashboard']" size = "large" color="success" id="confirm" >Confirm</ion-button>
+       <ion-button [routerLink]="['/dashboard']" size = "large" color="success" id="confirm" (click) = "presentToast()">Confirm</ion-button>
     </ion-item>
    <ion-item>
       <ion-button [routerLink]="['/cart-details']" size = "large" id="skip">Skip</ion-button>
