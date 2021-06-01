@@ -4,9 +4,15 @@ ion-title{
 ion-img{
     border-radius: 10px;
     padding: 10px;
+    align-items: center;
 }
 .logo{
-    padding-left: 48px;
+    //padding-left: 48px;
+    margin: auto;
+    align-items: center;
+
+    padding-left: 20px;
+    padding-right: 70px;
 }
 ion-fab-button{
     --background: #0065A5;
