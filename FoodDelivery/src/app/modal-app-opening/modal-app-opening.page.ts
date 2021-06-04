@@ -23,7 +23,7 @@ export class ModalAppOpeningPage implements OnInit {
     {
       let pinpoint = document.getElementById("pinpoint");
       pinpoint.style.position = "absolute"
-      pinpoint.style.left = event.clientX + 'px';
+      pinpoint.style.left = event.clientX/2 + 'px';
       pinpoint.style.top = event.clientY/2 + 'px';
       pinpoint.style.display = "block";
 
