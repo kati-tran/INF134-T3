@@ -11,11 +11,9 @@ export class SettingsPage implements OnInit {
 
   constructor() {}
 
-  public changeSliderVal(value)
+  public changeSliderVal(event)
   {
-    console.log(value)
-
-    this.sliderValue = value
+    this.sliderValue = event.detail.value
 
     var toolbar = document.getElementById("toolbar")
     var content = document.getElementById("content")

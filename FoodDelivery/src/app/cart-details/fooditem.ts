@@ -50,11 +50,12 @@ export class FoodItem {
             this.quantity--
     }
 
-    public setQuantity(value)
+    public setQuantity(input)
     {
-        if (!isNaN(value) && value > 1)
-            this.quantity = value
-        else if (value == "" || value < 1)
+        var newQ = input.value;
+        if (!isNaN(newQ) && newQ > 1)
+            this.quantity = newQ
+        else if (newQ == "" || newQ < 1)
             this.quantity = 1
     }
 }

@@ -50,10 +50,11 @@ export class Tab3Page {
     return (this.tax).toFixed(2)
   }
 
-  public setTip(value)
+  public setTip(input)
   {
-    if (!isNaN(value) && value >= 0)
-      this.tip = Number(value)
+    var newTip = input.value
+    if (!isNaN(input.value) && input.value >= 0)
+      this.tip = Number(input.value)
     else
       this.tip = Number(0.00)
   }
